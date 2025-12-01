@@ -39,13 +39,13 @@ export default function ProjectCard({ slug, title, description, technologies, gi
           className="flex items-center px-4 py-2 bg-[#3C3C43] text-[#EBEBEC] rounded-lg hover:bg-[#4C4C53] transition-colors"
         >
           <Github className="w-4 h-4 mr-2" />
-          Código
+          Code
         </a>
         <Link
           href={`/proyectos/${slug}`}
           className="flex items-center px-4 py-2 bg-[#20C997] text-[#17171B] rounded-lg hover:bg-[#1AB386] transition-colors"
         >
-          Ver más
+          View More
           <ArrowRight className="w-4 h-4 ml-2" />
         </Link>
       </div>

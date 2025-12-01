@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
     slug: 'cs2-marketmonitor',
     title: 'CS2 MarketMonitor',
     description: 'Desktop Application for Real-Time Price Monitoring of CS2 Items.',
-    longDescription: 'Aplicación de escritorio desarrollada en .NET 10 con WPF que permite monitorear en tiempo real los precios de items del mercado de Counter-Strike 2. Incluye sistema de alertas, histórico de precios y análisis de tendencias.',
+    longDescription: 'Desktop application developed in .NET 10 with WPF that enables real-time monitoring of Counter-Strike 2 market item prices. Includes an alert system, price history, and trend analysis.',
     technologies: ['.NET 10', 'WPF', 'Entity Framework', 'SQLite'],
     githubUrl: 'https://github.com/JoePinoOG/PriceCheckerCS2',
     images: [
@@ -26,42 +26,46 @@ export const PROJECTS: Project[] = [
       '/projects/cs2-monitor-3.png'
     ],
     features: [
-      'Monitoreo en tiempo real de precios',
-      'Sistema de alertas configurables',
-      'Histórico y gráficos de tendencias',
-      'Interfaz intuitiva con WPF',
-      'Base de datos local con SQLite'
+      'Real-time price monitoring',
+      'Configurable alert system',
+      'Price history and trend charts',
+      'Intuitive WPF user interface',
+      'Local database powered by SQLite'
     ],
-    challenges: 'El principal desafío fue implementar un sistema eficiente de actualización en tiempo real sin sobrecargar la API del mercado de Steam.',
-    outcome: 'La aplicación logró reducir el tiempo de análisis de mercado para multiples items simultaneamente.'
+    challenges: 'The main challenge was implementing an efficient real-time update system without overloading the Steam market API.',
+    outcome: 'The application reduced the time required to analyze the market for multiple items simultaneously.'
   },
   {
-    slug: 'comunity-app',
-    title: 'Comunity Android App',
-    description: 'Private Social Application for Community Engagement.',
-    longDescription: 'Aplicación móvil social privada construida con Ionic y TypeScript, con backend en Django REST Framework. Permite a comunidades cerradas compartir contenido, eventos y comunicarse de forma segura.',
-    technologies: ['TypeScript', 'Django REST Framework', 'PostgreSQL', 'Ionic'],
-    githubUrl: 'https://github.com/JoePinoOG/BackendComunity',
+    slug: 'argo-travels',
+    title: 'Argo project',
+    description: 'Argo project, a travel notes community platform.',
+    longDescription: 'Argo is a community platform for sharing travel notes and experiences. Built with .NET 8 for the backend and Angular 19, i worked developing the comment and admin system modules.',
+    technologies: ['TypeScript', '.NET 8', 'PostgreSQL', 'Angular 19'],
+    githubUrl: 'https://github.com/JoePinoOG',
     images: [
-      '/projects/comunity-1.png',
-      '/projects/comunity-2.png',
-      '/projects/comunity-3.png'
+      '/projects/argo-1.png',
+      '/projects/argo-2.png',
+      '/projects/argo-3.png',
+      '/projects/argo-4.png',
+      '/projects/argo-5.png',
+      '/projects/argo-6.png',
+      '/projects/argo-7.png',
+      '/projects/argo-8.png',
     ],
     features: [
-      'Sistema de autenticación seguro',
-      'Feed de publicaciones en tiempo real',
-      'Gestión de eventos comunitarios',
-      'Chat grupal e individual',
-      'Notificaciones push'
+      'Comment system module',
+      'Real-time posts feed',
+      'Admin dashboard and moderation tools',
+      'likes and user interactions'
     ],
-    challenges: 'Implementar un sistema de permisos granular que permitiera diferentes niveles de acceso según el rol del usuario.',
-    outcome: 'La app fue adoptada por una junta vecinal local, mejorando la comunicación y participación comunitaria.'
+    challenges: 'implementing a scalable comment system that could handle high traffic and user interactions while maintaining performance.',
+    outcome: 'The platform pass the estress tests and now supports a growing community of travel enthusiasts.'
   },
   {
     slug: 'mi-portfolio',
     title: 'My Portfolio',
-    description: 'Portfolio personal construido con Next.js y TailwindCSS.',
-    longDescription: 'Portfolio personal desarrollado con las últimas tecnologías web, utilizando Next.js 14 con App Router, TypeScript para type safety, y TailwindCSS para un diseño moderno y responsive.',
+    description: 'Personal portfolio built with Next.js and TailwindCSS.',
+    longDescription: 'Personal portfolio developed with modern web technologies, using Next.js 14 with the App Router, TypeScript for type safety, and TailwindCSS for a modern, responsive design.',
     technologies: ['Next.js', 'TypeScript', 'TailwindCSS'],
     githubUrl: 'https://github.com/JoePinoOG/portfolio',
     images: [
@@ -69,10 +73,10 @@ export const PROJECTS: Project[] = [
       '/projects/portfolio-2.png'
     ],
     features: [
-      'Diseño responsive y moderno',
-      'Optimización SEO',
-      'Páginas dinámicas para proyectos',
-      'Animaciones suaves'
+      'Responsive, modern design',
+      'SEO optimization',
+      'Dynamic project pages',
+      'Smooth animations'
     ]
   }
 ];

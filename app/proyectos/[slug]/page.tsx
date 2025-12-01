@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ChevronLeft, Github, ExternalLink } from 'lucide-react';
 import { PROJECTS } from '@/app/data/projectsdata';
 import AnimatedBackground from '@/app/components/AnimatedBackground';
+import ProjectGallery from '@/app/components/ProjectGallery';
 
 export async function generateStaticParams() {
   return PROJECTS.map((project) => ({
@@ -29,7 +30,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             className="inline-flex items-center text-[#20C997] hover:text-[#1AB386] mb-8 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 mr-2" />
-            Volver a proyectos
+            Back to Projects
           </Link>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-[#EBEBEC]">
@@ -56,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               className="inline-flex items-center px-6 py-3 bg-[#2C2C33] text-[#EBEBEC] rounded-lg hover:bg-[#3C3C43] transition-colors"
             >
               <Github className="w-5 h-5 mr-2" />
-              Ver código
+              View Code
             </a>
             {project.liveUrl && (
               <a
@@ -66,14 +67,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 className="inline-flex items-center px-6 py-3 bg-[#20C997] text-[#17171B] rounded-lg hover:bg-[#1AB386] transition-colors"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
-                Ver proyecto
+                View Project
               </a>
             )}
           </div>
 
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#EBEBEC]">
-              Sobre el proyecto
+              About the Project
             </h2>
             <p className="text-lg text-[#86868B] leading-relaxed">
               {project.longDescription}
@@ -83,30 +84,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           {project.images && project.images.length > 0 && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-[#EBEBEC]">
-                Capturas de pantalla
+                Screenshots
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.images.map((image, index) => (
-                  <div
-                    key={index}
-                    className="relative aspect-video bg-[#2C2C33] rounded-lg overflow-hidden border border-[#3C3C43]"
-                  >
-                    <Image
-                      src={image}
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+              <ProjectGallery images={project.images} title={project.title} />
             </section>
           )}
 
           {project.features && project.features.length > 0 && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-[#EBEBEC]">
-                Características principales
+                Main Features
               </h2>
               <ul className="space-y-3">
                 {project.features.map((feature, index) => (
@@ -124,7 +111,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           {project.challenges && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-4 text-[#EBEBEC]">
-                Desafíos técnicos
+                Technical Challenges
               </h2>
               <p className="text-lg text-[#86868B] leading-relaxed bg-[#2C2C33] p-6 rounded-lg border border-[#3C3C43]">
                 {project.challenges}
@@ -135,7 +122,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           {project.outcome && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-4 text-[#EBEBEC]">
-                Resultados
+                Results & Outcome
               </h2>
               <p className="text-lg text-[#86868B] leading-relaxed bg-[#20C997]/10 p-6 rounded-lg border border-[#20C997]/30">
                 {project.outcome}
