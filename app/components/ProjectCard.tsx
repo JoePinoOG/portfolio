@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image'; // Importar Image
 import { Github, ArrowRight } from 'lucide-react';
 
 interface ProjectProps {
@@ -9,28 +8,16 @@ interface ProjectProps {
   description: string;
   technologies: string[];
   githubUrl: string;
-  imageUrl?: string; // Nueva propiedad opcional
 }
 
-export default function ProjectCard({ slug, title, description, technologies, githubUrl, imageUrl }: ProjectProps) {
+export default function ProjectCard({ slug, title, description, technologies, githubUrl }: ProjectProps) {
   const accentColor = "bg-[#20C997]";
   const secondaryBg = "bg-[#2C2C33]";
   
   return (
     <article className={`${secondaryBg} p-6 rounded-xl shadow-2xl transition-all duration-300 hover:shadow-[#20C997]/20`}>
-      <div className="w-full h-48 relative mb-4 rounded-lg overflow-hidden bg-gray-700">
-        {imageUrl ? (
-          <Image 
-            src={imageUrl} 
-            alt={title} 
-            fill 
-            className="object-cover transition-transform duration-300 hover:scale-105"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-gray-400">
-            [Sin imagen]
-          </div>
-        )}
+      <div className="w-full h-48 bg-gray-700 rounded-lg mb-4 flex items-center justify-center text-gray-400">
+        [Screenshot/Demo de {title}]
       </div>
       
       <h3 className="text-3xl font-bold mb-3 text-[#EBEBEC]">{title}</h3>
