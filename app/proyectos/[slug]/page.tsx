@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronLeft, Github, ExternalLink } from 'lucide-react';
+import { ChevronLeft, Github, ExternalLink, Play } from 'lucide-react';
 import { PROJECTS } from '@/app/data/projectsdata';
 import AnimatedBackground from '@/app/components/AnimatedBackground';
 import ProjectGallery from '@/app/components/ProjectGallery';
@@ -68,6 +68,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 View Project
+              </a>
+            )}
+            {project.videoUrl && (
+              <a
+                href={project.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-[#2C2C33] text-[#EBEBEC] rounded-lg hover:bg-[#3C3C43] transition-colors"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Video
               </a>
             )}
           </div>
