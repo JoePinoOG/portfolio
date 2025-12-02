@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   githubUrl: string;
   liveUrl?: string;
+  videoUrl?: string; // Nuevo campo opcional para video
   images: string[];
   features: string[];
   challenges?: string;
@@ -21,9 +22,10 @@ export const PROJECTS: Project[] = [
     technologies: ['.NET 10', 'WPF', 'Entity Framework', 'SQLite'],
     githubUrl: 'https://github.com/JoePinoOG/PriceCheckerCS2',
     images: [
-      '/projects/cs2-monitor-1.png',
-      '/projects/cs2-monitor-2.png',
-      '/projects/cs2-monitor-3.png'
+      '/projects/cs2pc1.png',
+      '/projects/cs2pc2.png',
+      '/projects/cs2pc3.png',
+      '/projects/cs2pc4.png',
     ],
     features: [
       'Real-time price monitoring',
@@ -69,14 +71,44 @@ export const PROJECTS: Project[] = [
     technologies: ['Next.js', 'TypeScript', 'TailwindCSS'],
     githubUrl: 'https://github.com/JoePinoOG/portfolio',
     images: [
-      '/projects/portfolio-1.png',
-      '/projects/portfolio-2.png'
     ],
     features: [
       'Responsive, modern design',
       'SEO optimization',
       'Dynamic project pages',
       'Smooth animations'
+    ]
+  },
+  {
+    slug: 'comunity-app',
+    title: 'Comunity App',
+    description: 'Full-Stack Android application built with Angular, Django, and Ionic.',
+    longDescription: 'Full-Stack development covering the complete software lifecycle, from architecture conceptualization to final implementation. Experience in creating user-centered web applications (UX/UI) and using Scrum methodologies to ensure development efficiency and quality of technical and functional documentation.',
+    technologies: ['Angular', 'Django', 'Ionic'],
+    githubUrl: 'https://github.com/JoePinoOG',
+    videoUrl: 'https://youtu.be/o0Jk6FDF028',
+    images: [],
+    features: [
+      'Full software development lifecycle',
+      'User-centered UX/UI design',
+      'Scrum methodology implementation',
+      'Technical and functional documentation'
+    ]
+  },
+  {
+    slug: 'hpans-barber',
+    title: 'Hpans Barber',
+    description: 'Mobile booking platform with Client/Admin panels.',
+    longDescription: 'Mobile Application development creating multi-panel solutions (Client/Administrator) with a strong focus on user experience (UX/UI). Responsible for the integral development of Hpans Barber, a booking platform that includes real-time appointment management, Google Maps integration, and business process optimization.',
+    technologies: ['Angular', 'Firebase', 'Ionic'],
+    githubUrl: 'https://github.com/JoePinoOG',
+    videoUrl: 'https://youtu.be/jdvaxBmzY18',
+    images: [],
+    features: [
+      'Multi-panel solution (Client/Admin)',
+      'Real-time appointment management',
+      'Google Maps integration',
+      'Business process optimization'
     ]
   }
 ];
